@@ -1,95 +1,378 @@
-# Frontend Mentor - Base Apparel coming soon page
+# Multi-Cloud Security Framework
 
-![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)
+## Author
+**Built by:** Vekis Tem  
+**Project:** Multi-Cloud Security Framework  
+**Purpose:** Comprehensive security monitoring and incident response across AWS, Azure, and GCP
 
-## Welcome! 👋
+---
 
-Thanks for checking out this front-end coding challenge.
+## Overview
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+The Multi-Cloud Security Framework is a comprehensive, automated security solution designed to provide unified security monitoring, threat detection, and incident response across multiple cloud providers. In today's hybrid and multi-cloud environments, organizations face the challenge of maintaining consistent security postures across different cloud platforms, each with their own native security tools and APIs.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+This framework addresses these challenges by providing a centralized, automated approach to security management that works seamlessly across AWS, Azure, and GCP.
 
-## The challenge
+### Purpose
 
-Your challenge is to build out this coming soon page and get it looking as close to the design as possible.
+The primary purpose of this framework is to:
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+1. **Unify Security Monitoring**: Provide a single pane of glass for security monitoring across multiple cloud providers
+2. **Automate Compliance**: Ensure consistent compliance with security standards (CIS, NIST, SOC 2, etc.) across all cloud environments
+3. **Detect Threats**: Leverage native cloud security services while providing additional correlation and analysis
+4. **Respond to Incidents**: Automate incident response and remediation actions across cloud boundaries
+5. **Reduce Manual Overhead**: Minimize the need for manual security monitoring and response tasks
 
-Your users should be able to:
+---
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Receive an error message when the `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
+## Features
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### 🔒 **Compliance Monitoring**
+- **Automated Compliance Checks**: Continuous monitoring against CIS, NIST, SOC 2, and other industry standards
+- **Multi-Cloud Coverage**: Consistent compliance monitoring across AWS, Azure, and GCP
+- **Real-time Alerts**: Immediate notification of compliance violations
+- **Compliance Reporting**: Automated generation of compliance reports and dashboards
 
-## Where to find everything
+### 🚨 **Threat Detection**
+- **Native Integration**: Leverages each cloud provider's native security services:
+  - AWS: Security Hub, GuardDuty, CloudTrail
+  - Azure: Security Center (Defender for Cloud), Sentinel
+  - GCP: Security Command Center, Cloud Armor
+- **Custom Detection Rules**: Ability to implement custom threat detection logic
+- **Cross-Cloud Correlation**: Correlate threats across multiple cloud environments
+- **Machine Learning**: Advanced threat detection using ML algorithms
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### ⚡ **Incident Response**
+- **Automated Response**: Pre-configured automated responses to common security incidents
+- **Escalation Workflows**: Intelligent escalation based on threat severity and type
+- **Remediation Actions**: Automated remediation for common security issues
+- **Incident Tracking**: Comprehensive incident lifecycle management
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### 🔧 **Infrastructure as Code**
+- **Terraform Provisioning**: All security services provisioned using Infrastructure as Code
+- **Version Control**: Complete version control of security configurations
+- **Environment Consistency**: Ensures consistent security posture across environments
+- **Automated Deployment**: CI/CD pipeline for security infrastructure deployment
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+---
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+## Architecture
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### High-Level Architecture
 
-## Building your project
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Multi-Cloud Security Framework               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │     AWS     │    │    Azure    │    │     GCP     │         │
+│  │             │    │             │    │             │         │
+│  │ • Security  │    │ • Security  │    │ • Security  │         │
+│  │   Hub       │    │   Center    │    │   Command   │         │
+│  │ • GuardDuty │    │ • Sentinel  │    │   Center    │         │
+│  │ • CloudTrail│    │ • Monitor   │    │ • Cloud     │         │
+│  │             │    │             │    │   Armor     │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+│           │                 │                 │                 │
+│           └─────────────────┼─────────────────┘                 │
+│                             │                                   │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │              Shared Aggregator & Orchestrator               │ │
+│  │                                                             │ │
+│  │ • Multi-Cloud Findings Aggregation                         │ │
+│  │ • Threat Correlation & Analysis                            │ │
+│  │ • Incident Response Automation                             │ │
+│  │ • Compliance Monitoring & Reporting                        │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+│                             │                                   │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │                    GitHub Actions CI/CD                     │ │
+│  │                                                             │ │
+│  │ • Infrastructure Deployment                                │ │
+│  │ • Security Testing                                         │ │
+│  │ • Compliance Validation                                    │ │
+│  │ • Automated Response Testing                               │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Technology Stack
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **Infrastructure as Code** | Terraform | Provision and manage security services across clouds |
+| **Orchestration** | Python | Script automation, data processing, and API integration |
+| **CI/CD** | GitHub Actions | Automated testing, deployment, and security validation |
+| **Cloud Providers** | AWS, Azure, GCP | Native security services and APIs |
+| **Monitoring** | Native Cloud Services | Real-time security monitoring and alerting |
 
-## Deploying your project
+### Security Services Integration
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+#### AWS Services
+- **AWS Security Hub**: Centralized security findings and compliance status
+- **Amazon GuardDuty**: Continuous threat detection and monitoring
+- **AWS CloudTrail**: Comprehensive API logging and audit trail
+- **AWS Config**: Resource configuration monitoring and compliance
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### Azure Services
+- **Microsoft Defender for Cloud**: Unified security management and threat protection
+- **Azure Sentinel**: Cloud-native SIEM and SOAR solution
+- **Azure Monitor**: Comprehensive monitoring and diagnostics
+- **Azure Log Analytics**: Centralized log management and analysis
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+#### GCP Services
+- **Security Command Center**: Centralized security and risk management
+- **Cloud Armor**: DDoS protection and web application firewall
+- **Cloud Logging**: Centralized logging and monitoring
+- **Cloud Monitoring**: Infrastructure and application monitoring
 
-## Create a custom `README.md`
+---
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Directory Structure
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```
+Multi-CLoud Security Framework/
+│
+├── 📁 aws/                          # AWS-specific configurations and scripts
+│   ├── 📁 terraform/               # AWS Infrastructure as Code
+│   │   ├── main.tf                 # Main Terraform configuration
+│   │   ├── variables.tf            # AWS-specific variables
+│   │   ├── outputs.tf              # AWS resource outputs
+│   │   └── README.md               # AWS Terraform documentation
+│   └── 📁 scripts/                 # AWS Python automation scripts
+│       ├── fetch_findings.py       # Fetch Security Hub & GuardDuty findings
+│       └── README.md               # AWS scripts documentation
+│
+├── 📁 azure/                       # Azure-specific configurations and scripts
+│   ├── 📁 terraform/               # Azure Infrastructure as Code
+│   │   ├── main.tf                 # Main Terraform configuration
+│   │   ├── variables.tf            # Azure-specific variables
+│   │   ├── outputs.tf              # Azure resource outputs
+│   │   └── README.md               # Azure Terraform documentation
+│   └── 📁 scripts/                 # Azure Python automation scripts
+│       ├── fetch_findings.py       # Fetch Security Center alerts
+│       └── README.md               # Azure scripts documentation
+│
+├── 📁 gcp/                         # GCP-specific configurations and scripts
+│   ├── 📁 terraform/               # GCP Infrastructure as Code
+│   │   ├── main.tf                 # Main Terraform configuration
+│   │   ├── variables.tf            # GCP-specific variables
+│   │   ├── outputs.tf              # GCP resource outputs
+│   │   └── README.md               # GCP Terraform documentation
+│   └── 📁 scripts/                 # GCP Python automation scripts
+│       ├── fetch_findings.py       # Fetch Security Command Center findings
+│       └── README.md               # GCP scripts documentation
+│
+├── 📁 shared/                      # Shared components and utilities
+│   └── 📁 aggregator/              # Multi-cloud aggregation and orchestration
+│       └── README.md               # Aggregator documentation
+│
+├── 📁 .github/                     # GitHub Actions CI/CD workflows
+│   └── 📁 workflows/               # Automated workflows
+│       └── ci.yml                  # Continuous Integration workflow
+│
+├── 📄 requirements.txt             # Python dependencies
+├── 📄 .gitignore                   # Git ignore patterns
+└── 📄 README.md                    # This comprehensive documentation
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+---
 
-## Submitting your solution
+## How It Solves Real-World Problems
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Problem 1: Security Tool Fragmentation
+**Challenge**: Organizations using multiple cloud providers often have fragmented security tools, making it difficult to maintain a unified security posture.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+**Solution**: This framework provides a centralized approach to security management while leveraging each cloud provider's native security services. The shared aggregator correlates findings from all clouds, providing a single view of security status.
 
-## Sharing your solution
+### Problem 2: Manual Security Operations
+**Challenge**: Security teams spend significant time manually monitoring multiple cloud environments, leading to delayed threat detection and response.
 
-There are multiple places you can share your solution:
+**Solution**: Automated monitoring and response capabilities reduce manual overhead. The framework continuously monitors all cloud environments and can automatically respond to common security incidents.
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Problem 3: Compliance Complexity
+**Challenge**: Maintaining compliance across multiple cloud providers requires understanding different compliance frameworks and implementing controls consistently.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+**Solution**: The framework implements standardized compliance monitoring across all cloud providers, ensuring consistent adherence to security standards regardless of the underlying cloud platform.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+### Problem 4: Incident Response Delays
+**Challenge**: Security incidents often go undetected or unresponded to due to lack of visibility across cloud boundaries.
 
-## Got feedback for us?
+**Solution**: Real-time threat detection and automated incident response capabilities ensure quick identification and remediation of security issues.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Problem 5: Resource Management
+**Challenge**: Managing security resources across multiple clouds requires different tools and processes for each provider.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+**Solution**: Infrastructure as Code (Terraform) provides consistent resource management across all cloud providers, reducing complexity and ensuring consistency.
 
-**Have fun building!** 🚀
+---
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. **Cloud Accounts & Permissions**:
+   - AWS Account with appropriate IAM permissions
+   - Azure Subscription with Security Center access
+   - GCP Project with Security Command Center enabled
+
+2. **Development Environment**:
+   - Python 3.8 or higher
+   - Terraform 1.0 or higher
+   - Git for version control
+
+3. **Cloud CLI Tools**:
+   - AWS CLI configured with appropriate credentials
+   - Azure CLI installed and authenticated
+   - Google Cloud SDK installed and configured
+
+### Installation Steps
+
+#### Step 1: Clone the Repository
+```bash
+git clone <repository-url>
+cd Multi-CLoud Security Framework
+```
+
+#### Step 2: Install Python Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### Step 3: Configure Cloud Credentials
+
+**AWS Configuration**:
+```bash
+aws configure
+# Enter your AWS Access Key ID, Secret Access Key, and default region
+```
+
+**Azure Configuration**:
+```bash
+az login
+az account set --subscription <your-subscription-id>
+```
+
+**GCP Configuration**:
+```bash
+gcloud auth application-default login
+gcloud config set project <your-project-id>
+```
+
+#### Step 4: Deploy Infrastructure
+
+**Deploy AWS Security Services**:
+```bash
+cd aws/terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+**Deploy Azure Security Services**:
+```bash
+cd azure/terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+**Deploy GCP Security Services**:
+```bash
+cd gcp/terraform
+terraform init
+terraform plan -var="project=<your-gcp-project-id>"
+terraform apply -var="project=<your-gcp-project-id>"
+```
+
+#### Step 5: Test the Setup
+
+**Test AWS Security Scripts**:
+```bash
+cd aws/scripts
+python fetch_findings.py
+```
+
+**Test Azure Security Scripts**:
+```bash
+cd azure/scripts
+export AZURE_SUBSCRIPTION_ID=<your-subscription-id>
+python fetch_findings.py
+```
+
+**Test GCP Security Scripts**:
+```bash
+cd gcp/scripts
+export GCP_PROJECT_ID=<your-project-id>
+export GCP_ORG_ID=<your-org-id>
+python fetch_findings.py
+```
+
+### Configuration
+
+#### Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```bash
+# AWS Configuration
+AWS_DEFAULT_REGION=us-east-1
+
+# Azure Configuration
+AZURE_SUBSCRIPTION_ID=your-subscription-id
+
+# GCP Configuration
+GCP_PROJECT_ID=your-project-id
+GCP_ORG_ID=your-org-id
+
+# Notification Settings
+SLACK_WEBHOOK_URL=your-slack-webhook-url
+EMAIL_RECIPIENTS=security-team@company.com
+```
+
+#### Customizing Security Rules
+
+Each cloud provider's scripts can be customized to implement specific security rules and response actions. Refer to the individual README files in each cloud provider's directory for detailed customization instructions.
+
+### Monitoring and Maintenance
+
+#### Regular Tasks
+
+1. **Weekly**: Review security findings and update response rules
+2. **Monthly**: Update compliance baselines and security policies
+3. **Quarterly**: Conduct security assessments and update threat models
+
+#### Troubleshooting
+
+Common issues and solutions are documented in each cloud provider's README file. For additional support, refer to the cloud provider's official documentation.
+
+---
+
+## Contributing
+
+This framework is designed to be extensible and customizable. Contributions are welcome in the following areas:
+
+- Additional cloud provider integrations
+- New security detection rules
+- Enhanced incident response automation
+- Improved compliance monitoring
+- Documentation improvements
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## Support
+
+For questions, issues, or contributions, please contact:
+- **Author**: Vekis Tem
+- **Project**: Multi-Cloud Security Framework
+
+---
+
+*This framework represents a comprehensive approach to multi-cloud security, providing organizations with the tools they need to maintain robust security postures across diverse cloud environments.* 
