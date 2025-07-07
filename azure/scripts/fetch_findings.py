@@ -18,4 +18,4 @@ for alert in alerts:
     print(
         f"Alert: {alert.name} | State: {alert.state} | "
         f"Severity: {alert.severity}"
-    ) 
+    )
