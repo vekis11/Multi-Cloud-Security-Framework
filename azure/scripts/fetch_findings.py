@@ -13,4 +13,5 @@ client = SecurityCenter(credential, subscription_id)
 print("Fetching security alerts from Azure Security Center...")
 alerts = client.alerts.list()
 for alert in alerts:
-    print(f"Alert: {alert.name} | State: {alert.state} | Severity: {alert.severity}") 
+   # ... existing code ...
+print(f"Alert: {alert.name} | State: {alert.state} | Severity: {alert.severity}")
