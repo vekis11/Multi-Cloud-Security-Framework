@@ -18,4 +18,4 @@ for finding in findings:
     print(
         f"Finding: {finding.finding.name} | State: {finding.finding.state} | "
         f"Severity: {finding.finding.severity}"
-    ) 
+    )
