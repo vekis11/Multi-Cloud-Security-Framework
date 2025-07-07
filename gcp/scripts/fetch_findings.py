@@ -15,11 +15,7 @@ print(f"Fetching findings from: {source_name}")
 
 findings = client.list_findings(request={"parent": source_name})
 for finding in findings:
-# ... existing code ...
-for finding in findings:
     print(
-        f"Finding: {finding.finding.name} | "
-        f"State: {finding.finding.state} | "
+        f"Finding: {finding.finding.name} | State: {finding.finding.state} | "
         f"Severity: {finding.finding.severity}"
-    )
-
+    ) 
