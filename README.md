@@ -175,9 +175,9 @@ Multi-CLoud Security Framework/
 ├── 📄 requirements.txt             # Python dependencies
 ├── 📄 .gitignore                   # Git ignore patterns
 └── 📄 README.md                    # This comprehensive documentation
-```
 
----
+
+
 
 ## How It Solves Real-World Problems
 
