@@ -65,35 +65,35 @@ The primary purpose of this framework is to:
 │                    Multi-Cloud Security Framework               │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │     AWS     │    │    Azure    │    │     GCP     │         │
-│  │             │    │             │    │             │         │
-│  │ • Security  │    │ • Security  │    │ • Security  │         │
-│  │   Hub       │    │   Center    │    │   Command   │         │
-│  │ • GuardDuty │    │ • Sentinel  │    │   Center    │         │
-│  │ • CloudTrail│    │ • Monitor   │    │ • Cloud     │         │
-│  │             │    │             │    │   Armor     │         │
-│  └─────────────┘    └─────────────┘    └─────────────┘         │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐          │
+│  │     AWS     │    │    Azure    │    │     GCP     │          │
+│  │             │    │             │    │             │          │
+│  │ • Security  │    │ • Security  │    │ • Security  │          │
+│  │   Hub       │    │   Center    │    │   Command   │          │
+│  │ • GuardDuty │    │ • Sentinel  │    │   Center    │          │
+│  │ • CloudTrail│    │ • Monitor   │    │ • Cloud     │          │
+│  │             │    │             │    │   Armor     │          │
+│  └─────────────┘    └─────────────┘    └─────────────┘          │
 │           │                 │                 │                 │
 │           └─────────────────┼─────────────────┘                 │
 │                             │                                   │
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │              Shared Aggregator & Orchestrator               │ │
-│  │                                                             │ │
+│  ┌────────────────────────────────────────────────────────────┐ │
+│  │              Shared Aggregator & Orchestrator              │ │
+│  │                                                            │ │
 │  │ • Multi-Cloud Findings Aggregation                         │ │
 │  │ • Threat Correlation & Analysis                            │ │
 │  │ • Incident Response Automation                             │ │
 │  │ • Compliance Monitoring & Reporting                        │ │
-│  └─────────────────────────────────────────────────────────────┘ │
+│  └────────────────────────────────────────────────────────────┘ │
 │                             │                                   │
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │                    GitHub Actions CI/CD                     │ │
-│  │                                                             │ │
+│  ┌────────────────────────────────────────────────────────────┐ │
+│  │                    GitHub Actions CI/CD                    │ │
+│  │                                                            │ │
 │  │ • Infrastructure Deployment                                │ │
 │  │ • Security Testing                                         │ │
 │  │ • Compliance Validation                                    │ │
 │  │ • Automated Response Testing                               │ │
-│  └─────────────────────────────────────────────────────────────┘ │
+│  └────────────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
